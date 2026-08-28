@@ -1,0 +1,181 @@
+/* =========================================================
+   SECCIÓN VIDEO (NUEVA)
+========================================================= */
+
+.video-principal {
+    padding: 85px 8%;
+    background: var(--fondo);
+}
+
+.video-descripcion {
+    max-width: 800px;
+    margin: -10px auto 40px;
+    text-align: center;
+}
+
+.video-descripcion p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--texto);
+    margin-bottom: 18px;
+}
+
+.video-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 40px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--cafe);
+    text-transform: uppercase;
+}
+
+.video-meta span {
+    position: relative;
+}
+
+.video-meta span::after {
+    content: "·";
+    position: absolute;
+    right: -22px;
+    color: var(--celeste);
+}
+
+.video-meta span:last-child::after {
+    content: none;
+}
+
+/* WRAPPER DEL VIDEO */
+.video-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px var(--sombra);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: #0a0a0a;
+}
+
+/* BOTÓN AMPLIAR (sobre el video) */
+.btn-ampliar-video {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.btn-ampliar-video:hover {
+    background: var(--guindo);
+    transform: scale(1.1);
+    border-color: var(--guindo);
+}
+
+.btn-ampliar-video svg {
+    width: 22px;
+    height: 22px;
+    stroke: #fff;
+}
+
+.ampliar-video-texto {
+    text-align: center;
+    color: var(--texto-suave);
+    font-size: 9px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+/* MODAL PARA VIDEO */
+.modal-video {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 10, 11, 0.92);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.modal-video.abierto {
+    display: flex;
+}
+
+.modal-video video {
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+}
+
+.cerrar-modal-video {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: transparent;
+    color: white;
+    font-size: 45px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+}
+
+.cerrar-modal-video:hover {
+    transform: rotate(90deg);
+    color: var(--celeste);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .video-meta {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .video-meta span::after {
+        content: none;
+    }
+
+    .btn-ampliar-video {
+        width: 40px;
+        height: 40px;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .btn-ampliar-video svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .modal-video {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,835 @@
+/* =========================================================
+   YAKU | STORYBOARD
+========================================================= */
+
+/* =========================================================
+   VARIABLES - MODO CLARO
+========================================================= */
+
+:root {
+    --fondo: #f2ebe5;
+    --fondo-secundario: #e5d8cf;
+    --texto: #342522;
+    --texto-suave: #604d48;
+    --celeste: #63aaa8;
+    --celeste-oscuro: #317977;
+    --guindo: #722d3d;
+    --guindo-claro: #9a5664;
+    --cafe: #704d40;
+    --cafe-claro: #a7836f;
+    --blanco: #fffdf9;
+    --sombra: rgba(70, 44, 39, 0.16);
+    --borde: rgba(112, 77, 64, 0.20);
+}
+
+/* =========================================================
+   MODO OSCURO
+========================================================= */
+
+body.modo-oscuro {
+    --fondo: #181314;
+    --fondo-secundario: #241c1d;
+    --texto: #f5e9e2;
+    --texto-suave: #d7c2ba;
+    --celeste: #74c4c1;
+    --celeste-oscuro: #42928f;
+    --guindo: #b26072;
+    --guindo-claro: #d78a98;
+    --cafe: #c29478;
+    --cafe-claro: #d5ae96;
+    --blanco: #211a1b;
+    --sombra: rgba(0, 0, 0, 0.35);
+    --borde: rgba(180, 223, 218, 0.20);
+}
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    overflow-x: hidden;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.bloqueado {
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fondo-decorativo {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99, 170, 168, 0.12), transparent 70%);
+    top: -250px;
+    left: -200px;
+    z-index: -1;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+    width: 90%;
+}
+
+/* =========================================================
+   BOTÓN CAMBIO DE TEMA (IZQUIERDA)
+========================================================= */
+
+.tema-btn {
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    width: 55px;
+    height: 32px;
+    border-radius: 30px;
+    background: var(--guindo);
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    box-shadow: 0 8px 20px var(--sombra);
+    transition: 0.3s ease;
+}
+
+.tema-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================================
+   BOTÓN DEL MENÚ (DERECHA)
+========================================================= */
+
+.menu-btn {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+    box-shadow: 0 10px 25px var(--sombra);
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.menu-btn:hover {
+    transform: scale(1.07);
+}
+
+.menu-btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* =========================================================
+   MENÚ LATERAL
+========================================================= */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: var(--blanco);
+    z-index: 1300;
+    transform: translateX(100%);
+    transition: transform 0.45s cubic-bezier(.77, 0, .18, 1);
+    box-shadow: -15px 0 50px var(--sombra);
+    overflow-y: auto;
+}
+
+.menu-lateral.abierto {
+    transform: translateX(0);
+}
+
+.menu-contenido {
+    padding: 25px 35px 40px;
+}
+
+/* =========================================================
+   ENCABEZADO MENÚ
+========================================================= */
+
+.menu-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.menu-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.cerrar-menu {
+    background: transparent;
+    color: var(--texto);
+    font-size: 38px;
+    transition: 0.3s ease;
+}
+
+.cerrar-menu:hover {
+    color: var(--guindo);
+    transform: rotate(90deg);
+}
+
+/* =========================================================
+   ENLACES
+========================================================= */
+
+.enlace-menu {
+    display: block;
+    padding: 12px 0;
+    color: var(--texto);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.enlace-menu span {
+    font-family: "Montserrat", sans-serif;
+    color: var(--celeste-oscuro);
+    font-size: 9px;
+    margin-right: 10px;
+}
+
+.enlace-menu:hover {
+    color: var(--guindo);
+    padding-left: 6px;
+}
+
+.enlace-menu.activo {
+    color: var(--guindo);
+}
+
+/* =========================================================
+   INICIO / SUBMENÚ
+========================================================= */
+
+.titulo-menu {
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--texto);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.titulo-menu small {
+    font-family: "Montserrat", sans-serif;
+    color: var(--celeste-oscuro);
+    font-size: 9px;
+    margin-right: 10px;
+}
+
+.titulo-menu b {
+    color: var(--guindo);
+    transition: 0.3s ease;
+}
+
+.titulo-menu.abierto b {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu.abierto {
+    max-height: 250px;
+}
+
+.submenu a {
+    padding: 7px 0 7px 25px;
+    color: var(--texto-suave);
+    font-size: 11px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.submenu a:hover {
+    color: var(--celeste-oscuro);
+    padding-left: 32px;
+}
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+.storyboard-portada {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 20px;
+}
+
+.portada-contenido {
+    max-width: 750px;
+    z-index: 2;
+}
+
+.texto-superior {
+    color: var(--cafe);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.storyboard-portada h1 {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--guindo);
+    font-size: clamp(70px, 11vw, 145px);
+    font-weight: 500;
+    line-height: 0.9;
+    text-shadow: 3px 4px 0 rgba(99, 170, 168, 0.25), 8px 12px 25px var(--sombra);
+}
+
+.linea {
+    width: 60px;
+    height: 2px;
+    background: var(--celeste);
+    margin: 25px auto;
+}
+
+.frase-portada {
+    max-width: 580px;
+    margin: auto;
+    color: var(--texto);
+    font-size: 13px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.gota {
+    position: absolute;
+    border-radius: 50% 50% 50% 0;
+    background: linear-gradient(135deg, rgba(99, 170, 168, 0.25), rgba(114, 45, 61, 0.05));
+    transform: rotate(-45deg);
+}
+
+.gota-1 {
+    width: 150px;
+    height: 150px;
+    left: 8%;
+    top: 25%;
+}
+
+.gota-2 {
+    width: 90px;
+    height: 90px;
+    right: 12%;
+    bottom: 20%;
+}
+
+/* =========================================================
+   INTRODUCCIÓN
+========================================================= */
+
+.introduccion {
+    padding: 90px 0;
+    background: var(--fondo-secundario);
+}
+
+.introduccion-contenido {
+    max-width: 850px;
+}
+
+.introduccion-titulo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.introduccion-titulo > span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 55px;
+    color: var(--guindo);
+}
+
+.introduccion-titulo p {
+    color: var(--cafe);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.introduccion-titulo h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 45px;
+    color: var(--texto);
+    font-weight: 500;
+}
+
+.introduccion-texto {
+    max-width: 760px;
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.resumen-storyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 60px;
+    border-top: 1px solid var(--cafe-claro);
+    border-bottom: 1px solid var(--cafe-claro);
+}
+
+.resumen-storyboard div {
+    padding: 25px 20px;
+    border-right: 1px solid var(--cafe-claro);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resumen-storyboard div:last-child {
+    border-right: none;
+}
+
+.resumen-storyboard span {
+    color: var(--cafe);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.resumen-storyboard strong {
+    color: var(--guindo);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   SECCIÓN ESCENAS
+========================================================= */
+
+.seccion {
+    padding: 110px 0;
+}
+
+.encabezado-seccion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.encabezado-seccion > span {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--guindo);
+    font-size: 55px;
+}
+
+.encabezado-seccion p {
+    color: var(--cafe);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.encabezado-seccion h2 {
+    color: var(--texto);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+/* =========================================================
+   GRID DEL STORYBOARD
+   3 COLUMNAS × 5 FILAS
+========================================================= */
+
+.storyboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* =========================================================
+   TARJETA DE ESCENA
+========================================================= */
+
+.escena-card {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    box-shadow: 0 12px 30px var(--sombra);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
+}
+
+.escena-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px var(--sombra);
+}
+
+.escena-cabecera {
+    padding: 15px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.numero-escena {
+    color: var(--guindo);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.duracion {
+    color: var(--texto-suave);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+.imagen-escena {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    cursor: zoom-in;
+    background: var(--fondo-secundario);
+}
+
+.imagen-escena::after {
+    content: "⌕ Ampliar";
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    padding: 7px 10px;
+    background: rgba(20, 30, 28, 0.75);
+    color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.imagen-escena:hover::after {
+    opacity: 1;
+}
+
+.imagen-escena img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.imagen-escena:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================================
+   DATOS DE LA ESCENA
+========================================================= */
+
+.datos-escena {
+    padding: 22px 20px 24px;
+}
+
+.tipo-plano {
+    color: var(--cafe);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    margin-bottom: 10px;
+}
+
+.datos-escena h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--texto);
+    margin-bottom: 12px;
+}
+
+.descripcion {
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.narracion {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--borde);
+}
+
+.narracion span {
+    color: var(--guindo);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.narracion p {
+    margin-top: 8px;
+    color: var(--texto);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* DIFERENTES MOMENTOS DE LA HISTORIA */
+.transicion {
+    border-top: 3px solid var(--cafe);
+}
+
+.tecnologia {
+    border-top: 3px solid var(--celeste-oscuro);
+}
+
+.escena-final {
+    border-top: 3px solid var(--guindo);
+}
+
+/* =========================================================
+   RESUMEN FINAL
+========================================================= */
+
+.resumen-final {
+    padding: 120px 20px;
+    background: var(--fondo-secundario);
+    text-align: center;
+}
+
+.resumen-final-contenido {
+    max-width: 850px;
+    margin: auto;
+}
+
+.numero-final {
+    color: var(--guindo);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px;
+}
+
+.resumen-final p {
+    color: var(--cafe);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.resumen-final h2 {
+    color: var(--texto);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(50px, 8vw, 90px);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.etapas {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin: 45px 0;
+}
+
+.etapas div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.etapas span {
+    color: var(--guindo);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.etapas strong {
+    color: var(--texto);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.resumen-final small {
+    color: var(--texto-suave);
+    font-size: 11px;
+    letter-spacing: 1.2px;
+}
+
+/* =========================================================
+   MODAL PARA AMPLIAR IMÁGENES
+========================================================= */
+
+.modal-imagen {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(8, 14, 13, 0.92);
+}
+
+.modal-imagen.abierto {
+    display: flex;
+}
+
+.modal-imagen img {
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    animation: aparecerImagen 0.3s ease;
+}
+
+.cerrar-modal-imagen {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 45px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.cerrar-modal-imagen:hover {
+    transform: rotate(90deg);
+}
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes aparecerImagen {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+    .storyboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+========================================================= */
+
+@media (max-width: 650px) {
+    .menu-lateral {
+        width: 100%;
+    }
+
+    .storyboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resumen-storyboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resumen-storyboard div:nth-child(2) {
+        border-right: none;
+    }
+
+    .resumen-storyboard div:nth-child(1),
+    .resumen-storyboard div:nth-child(2) {
+        border-bottom: 1px solid var(--cafe-claro);
+    }
+
+    .etapas {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .storyboard-portada h1 {
+        font-size: 75px;
+    }
+
+    .modal-imagen {
+        padding: 20px;
+    }
+
+    .cerrar-modal-imagen {
+        top: 15px;
+        right: 15px;
+        font-size: 35px;
+    }
+
+    .seccion {
+        padding: 70px 0;
+    }
+
+    .encabezado-seccion h2 {
+        font-size: 36px;
+    }
+}

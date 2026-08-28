@@ -1,0 +1,806 @@
+/* =========================================================
+   YAKU: EL AGUA NO SE DERRAMA
+   GUIÓN
+========================================================= */
+
+/* =========================================================
+   PALETA DE COLORES
+========================================================= */
+
+:root {
+    --fondo: #f2ebe5;
+    --fondo-secundario: #e5d8cf;
+    --texto: #342522;
+    --texto-suave: #604d48;
+    --celeste: #63aaa8;
+    --celeste-oscuro: #317977;
+    --guindo: #722d3d;
+    --guindo-claro: #9a5664;
+    --cafe: #704d40;
+    --cafe-claro: #a7836f;
+    --blanco: #fffdf9;
+    --sombra: rgba(70, 44, 39, 0.16);
+}
+
+/* =========================================================
+   MODO OSCURO
+========================================================= */
+
+body.oscuro {
+    --fondo: #181314;
+    --fondo-secundario: #241c1d;
+    --texto: #f5e9e2;
+    --texto-suave: #d7c2ba;
+    --celeste: #74c4c1;
+    --celeste-oscuro: #42928f;
+    --guindo: #b26072;
+    --guindo-claro: #d78a98;
+    --cafe: #c29478;
+    --cafe-claro: #d5ae96;
+    --blanco: #211a1b;
+    --sombra: rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.bloqueado {
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================================
+   FONDO DECORATIVO
+========================================================= */
+
+.fondo-decorativo {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99, 170, 168, 0.12), transparent 70%);
+    top: -250px;
+    left: -200px;
+    z-index: -1;
+}
+
+/* =========================================================
+   BOTÓN TEMA
+========================================================= */
+
+.tema-btn {
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    width: 55px;
+    height: 32px;
+    border-radius: 30px;
+    background: var(--guindo);
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    box-shadow: 0 8px 20px var(--sombra);
+    transition: 0.3s ease;
+}
+
+.tema-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================================
+   BOTÓN MENÚ
+========================================================= */
+
+.menu-btn {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+    box-shadow: 0 10px 25px var(--sombra);
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.menu-btn:hover {
+    transform: scale(1.07);
+}
+
+.menu-btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* =========================================================
+   MENÚ LATERAL
+========================================================= */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: var(--blanco);
+    z-index: 1300;
+    transform: translateX(100%);
+    transition: transform 0.45s cubic-bezier(.77, 0, .18, 1);
+    box-shadow: -15px 0 50px var(--sombra);
+    overflow-y: auto;
+}
+
+.menu-lateral.abierto {
+    transform: translateX(0);
+}
+
+.menu-contenido {
+    padding: 25px 35px 40px;
+}
+
+/* =========================================================
+   ENCABEZADO MENÚ
+========================================================= */
+
+.menu-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.menu-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.cerrar-menu {
+    background: transparent;
+    color: var(--texto);
+    font-size: 38px;
+    transition: 0.3s ease;
+}
+
+.cerrar-menu:hover {
+    color: var(--guindo);
+    transform: rotate(90deg);
+}
+
+/* =========================================================
+   ENLACES
+========================================================= */
+
+.enlace-menu {
+    display: block;
+    padding: 12px 0;
+    color: var(--texto);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.enlace-menu span {
+    font-family: "Montserrat", sans-serif;
+    color: var(--celeste-oscuro);
+    font-size: 9px;
+    margin-right: 10px;
+}
+
+.enlace-menu:hover {
+    color: var(--guindo);
+    padding-left: 6px;
+}
+
+.enlace-menu.activo {
+    color: var(--guindo);
+}
+
+/* =========================================================
+   INICIO / SUBMENÚ
+========================================================= */
+
+.titulo-menu {
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--texto);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.titulo-menu small {
+    font-family: "Montserrat", sans-serif;
+    color: var(--celeste-oscuro);
+    font-size: 9px;
+    margin-right: 10px;
+}
+
+.titulo-menu b {
+    color: var(--guindo);
+    transition: 0.3s ease;
+}
+
+.titulo-menu.abierto b {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu.abierto {
+    max-height: 250px;
+}
+
+.submenu a {
+    padding: 7px 0 7px 25px;
+    color: var(--texto-suave);
+    font-size: 11px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.submenu a:hover {
+    color: var(--celeste-oscuro);
+    padding-left: 32px;
+}
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.contenedor {
+    max-width: 1050px;
+    margin: auto;
+}
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+.guion-portada {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.portada-contenido {
+    text-align: center;
+    max-width: 700px;
+    padding: 40px 20px;
+    animation: aparecer 1s ease;
+}
+
+.texto-superior {
+    color: var(--cafe);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.portada-contenido h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(80px, 13vw, 150px);
+    line-height: 0.85;
+    font-weight: 500;
+    color: var(--guindo);
+    text-shadow: 3px 4px 0 rgba(99, 170, 168, 0.25), 8px 12px 25px var(--sombra);
+}
+
+.linea {
+    width: 60px;
+    height: 2px;
+    background: var(--celeste);
+    margin: 25px auto;
+}
+
+.frase-portada {
+    max-width: 500px;
+    margin: auto;
+    font-size: 13px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+/* =========================================================
+   GOTAS
+========================================================= */
+
+.gota {
+    position: absolute;
+    border-radius: 50% 50% 50% 0;
+    background: linear-gradient(135deg, rgba(99, 170, 168, 0.25), rgba(114, 45, 61, 0.05));
+    transform: rotate(-45deg);
+}
+
+.gota-1 {
+    width: 150px;
+    height: 150px;
+    left: 8%;
+    top: 25%;
+}
+
+.gota-2 {
+    width: 90px;
+    height: 90px;
+    right: 12%;
+    bottom: 20%;
+}
+
+/* =========================================================
+   ENCABEZADOS
+========================================================= */
+
+.encabezado-seccion {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 50px;
+}
+
+.encabezado-seccion > span {
+    color: var(--guindo);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 45px;
+}
+
+.encabezado-seccion p {
+    color: var(--cafe);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.encabezado-seccion h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 500;
+}
+
+/* =========================================================
+   INTRODUCCIÓN
+========================================================= */
+
+.introduccion {
+    padding: 90px 8%;
+    background: var(--fondo-secundario);
+}
+
+.ficha-guion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--cafe-claro);
+    border-bottom: 1px solid var(--cafe-claro);
+}
+
+.ficha-guion div {
+    padding: 25px;
+    border-right: 1px solid var(--cafe-claro);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ficha-guion div:last-child {
+    border-right: none;
+}
+
+.ficha-guion span {
+    color: var(--cafe);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.ficha-guion strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   SECCIONES DEL GUIÓN
+========================================================= */
+
+.seccion-guion {
+    padding: 100px 8%;
+    background: var(--fondo);
+}
+
+.reinterpretacion {
+    background: linear-gradient(to bottom, var(--fondo-secundario), var(--fondo));
+}
+
+/* =========================================================
+   CHAT DEL GUIÓN
+========================================================= */
+
+.chat-guion {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 0 50px;
+}
+
+/* línea central */
+.chat-guion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--cafe-claro), transparent);
+    transform: translateX(-50%);
+    opacity: 0.7;
+}
+
+/* =========================================================
+   MENSAJES
+========================================================= */
+
+.mensaje {
+    position: relative;
+    width: 72%;
+    padding: 22px 26px 25px;
+    margin-bottom: 38px;
+    background: var(--blanco);
+    box-shadow: 0 12px 30px var(--sombra);
+    border-radius: 18px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    animation: aparecerMensaje 0.7s ease both;
+}
+
+.mensaje:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px var(--sombra);
+}
+
+/* cola estilo mensaje */
+.mensaje::after {
+    content: "";
+    position: absolute;
+    bottom: 14px;
+    width: 18px;
+    height: 18px;
+    background: var(--blanco);
+    transform: rotate(45deg);
+}
+
+/* izquierda */
+.escena-izquierda {
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+}
+
+.escena-izquierda::after {
+    left: -7px;
+}
+
+/* derecha */
+.escena-derecha {
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.escena-derecha::after {
+    right: -7px;
+}
+
+/* =========================================================
+   ENCABEZADO DEL MENSAJE
+========================================================= */
+
+.encabezado-mensaje {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 17px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(112, 77, 64, 0.25);
+    font-family: "Montserrat", sans-serif;
+}
+
+.numero {
+    color: var(--guindo);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.tipo {
+    color: var(--celeste-oscuro);
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tiempo {
+    margin-left: auto;
+    color: var(--cafe-claro);
+    font-size: 7px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   TEXTO DEL GUIÓN
+========================================================= */
+
+.mensaje p {
+    font-family: "Special Elite", "Courier New", monospace;
+    color: var(--texto);
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   MENSAJES ESPECIALES
+========================================================= */
+
+.mensaje.especial {
+    border-left: 4px solid var(--guindo);
+}
+
+.mensaje.importante {
+    border-top: 3px solid var(--celeste);
+}
+
+/* =========================================================
+   TECNOLOGÍA
+========================================================= */
+
+.mensaje.tecnologia {
+    background: linear-gradient(135deg, var(--blanco), rgba(99, 170, 168, 0.08));
+}
+
+.mensaje.tecnologia .numero {
+    color: var(--celeste-oscuro);
+}
+
+.mensaje.tecnologia::after {
+    background: var(--blanco);
+}
+
+/* =========================================================
+   ESCENA FINAL
+========================================================= */
+
+.escena-final {
+    width: 78%;
+    margin: 70px auto 20px;
+    text-align: center;
+    background: var(--guindo);
+    color: white;
+    border-radius: 22px;
+    box-shadow: 0 20px 45px var(--sombra);
+}
+
+.escena-final::after {
+    display: none;
+}
+
+.escena-final .encabezado-mensaje {
+    justify-content: center;
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.escena-final .numero,
+.escena-final .tipo,
+.escena-final .tiempo {
+    color: #d5e9e6;
+}
+
+.escena-final p {
+    color: white;
+    font-size: 27px;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   DATOS FINALES
+========================================================= */
+
+.datos-finales {
+    padding: 100px 8%;
+    background: var(--fondo);
+    text-align: center;
+}
+
+.nota-final {
+    max-width: 650px;
+    margin: auto;
+    padding: 45px 30px;
+    border-top: 1px solid var(--cafe-claro);
+    border-bottom: 1px solid var(--cafe-claro);
+}
+
+.nota-final span {
+    color: var(--guindo);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.nota-final p {
+    margin: 18px 0;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.nota-final strong {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--texto);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerMensaje {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+    .ficha-guion {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ficha-guion div:nth-child(2) {
+        border-right: none;
+    }
+    .ficha-guion div:nth-child(1),
+    .ficha-guion div:nth-child(2) {
+        border-bottom: 1px solid var(--cafe-claro);
+    }
+    .mensaje {
+        width: 80%;
+    }
+}
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+    .menu-lateral {
+        width: 100%;
+    }
+    .guion-portada {
+        min-height: 70vh;
+    }
+    .texto-superior {
+        letter-spacing: 2px;
+        font-size: 8px;
+    }
+    .introduccion,
+    .seccion-guion,
+    .datos-finales {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .ficha-guion {
+        grid-template-columns: 1fr;
+    }
+    .ficha-guion div {
+        border-right: none !important;
+        border-bottom: 1px solid var(--cafe-claro);
+    }
+    .ficha-guion div:last-child {
+        border-bottom: none;
+    }
+    .chat-guion::before {
+        left: 12px;
+    }
+    .mensaje {
+        width: calc(100% - 30px);
+        margin-left: 30px;
+        margin-right: 0;
+        border-radius: 16px;
+        border-bottom-left-radius: 5px;
+    }
+    .escena-derecha {
+        margin-left: 30px;
+    }
+    .mensaje::after {
+        left: -7px !important;
+        right: auto !important;
+    }
+    .encabezado-mensaje {
+        flex-wrap: wrap;
+    }
+    .tiempo {
+        width: 100%;
+        margin-left: 0;
+    }
+    .mensaje p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    .escena-final {
+        width: calc(100% - 30px);
+        margin-left: 30px;
+        border-radius: 18px;
+    }
+    .escena-final p {
+        font-size: 23px;
+    }
+}

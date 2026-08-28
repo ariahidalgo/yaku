@@ -1,0 +1,505 @@
+/* =========================================================
+   EVIDENCIA IA - ESTILOS ESPECÍFICOS
+========================================================= */
+
+.evidencia-ia {
+    padding: 85px 8%;
+    background: var(--fondo);
+}
+
+/* TÍTULO GRANDE CENTRADO */
+.encabezado-evidencia {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.encabezado-evidencia .numero-seccion {
+    display: inline-block;
+    color: var(--guindo);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    opacity: 0.6;
+    margin-bottom: 5px;
+}
+
+.titulo-evidencia-grande {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(70px, 13vw, 140px);
+    font-weight: 600;
+    color: var(--guindo);
+    letter-spacing: 10px;
+    line-height: 0.9;
+    text-shadow: 3px 3px 0 var(--celeste), 6px 8px 25px var(--sombra);
+}
+
+.subtitulo-evidencia {
+    color: var(--texto-suave);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* CARDS DE IA */
+.ia-card {
+    background: var(--blanco);
+    border-radius: 16px;
+    padding: 40px 45px;
+    margin-bottom: 45px;
+    box-shadow: 0 15px 40px var(--sombra);
+    border-left: 4px solid var(--celeste-oscuro);
+    transition: transform 0.3s ease;
+}
+
+.ia-card:hover {
+    transform: translateY(-4px);
+}
+
+.ia-card.errores-card {
+    border-left-color: var(--guindo);
+}
+
+/* HEADER DE CADA CARD */
+.ia-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--fondo-secundario);
+}
+
+.ia-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: var(--fondo);
+    padding: 8px;
+}
+
+.ia-header h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--texto);
+    margin: 0;
+}
+
+.ia-header p {
+    font-size: 11px;
+    color: var(--texto-suave);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.ia-header-icono {
+    font-size: 38px;
+    line-height: 1;
+}
+
+/* CONTENIDO IA */
+.ia-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* PROMPT ESTILO WHATSAPP */
+.prompt-whatsapp {
+    background: var(--fondo-secundario);
+    border-radius: 16px;
+    padding: 20px 24px;
+    max-width: 100%;
+}
+
+.prompt-bubble {
+    background: var(--blanco);
+    border-radius: 12px 12px 12px 4px;
+    padding: 18px 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.prompt-bubble p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--texto);
+    margin: 0;
+}
+
+.prompt-bubble p:first-child {
+    font-weight: 600;
+    color: var(--guindo);
+    margin-bottom: 8px;
+}
+
+.prompt-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 6px;
+}
+
+.prompt-ia {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--celeste-oscuro);
+}
+
+.prompt-fecha {
+    font-size: 10px;
+    color: var(--texto-suave);
+    font-weight: 500;
+}
+
+/* IMÁGENES DE IA */
+.ia-imagen {
+    text-align: center;
+}
+
+.ia-imagen img {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 10px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px var(--sombra);
+    margin: 0 auto;
+}
+
+.ia-imagen img:hover {
+    transform: scale(1.02);
+}
+
+.pie-imagen {
+    font-size: 10px;
+    color: var(--texto-suave);
+    font-weight: 500;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+
+.ia-nota {
+    background: var(--fondo-secundario);
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin-top: 15px;
+}
+
+.ia-nota p {
+    font-size: 12px;
+    color: var(--texto-suave);
+    margin: 0;
+}
+
+.ia-nota p strong {
+    color: var(--guindo);
+}
+
+/* DOLA DESCRIPCIÓN */
+.dola-descripcion {
+    background: var(--fondo-secundario);
+    border-radius: 10px;
+    padding: 16px 22px;
+    text-align: center;
+}
+
+.dola-descripcion p {
+    font-size: 14px;
+    color: var(--texto);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* GALERÍA DE ESCENAS */
+.galeria-escenas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.escena-item {
+    text-align: center;
+}
+
+.escena-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px var(--sombra);
+}
+
+.escena-item img:hover {
+    transform: scale(1.03);
+}
+
+/* CORRECCIONES */
+.correccion-item {
+    background: var(--fondo);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.correccion-item:last-child {
+    margin-bottom: 0;
+}
+
+.correccion-item h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--guindo);
+    margin: 0 0 8px 0;
+}
+
+.correccion-item > p {
+    font-size: 13px;
+    color: var(--texto);
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+}
+
+.correccion-item > p strong {
+    color: var(--guindo);
+}
+
+.correccion-imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.correccion-par {
+    position: relative;
+    text-align: center;
+}
+
+.correccion-par img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 16px var(--sombra);
+}
+
+.correccion-par img:hover {
+    transform: scale(1.03);
+}
+
+.correccion-etiqueta {
+    display: inline-block;
+    padding: 3px 14px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 6px;
+}
+
+.correccion-etiqueta.error {
+    background: #fde8e8;
+    color: #b33636;
+}
+
+.correccion-etiqueta.ok {
+    background: #e6f4ea;
+    color: #1e7a44;
+}
+
+.correccion-nota {
+    font-size: 12px;
+    color: var(--texto-suave);
+    margin: 0;
+    font-style: italic;
+    background: var(--blanco);
+    padding: 10px 14px;
+    border-radius: 8px;
+    border-left: 3px solid var(--celeste);
+}
+
+/* CORRECCIONES IMPORTANTES */
+.correcciones-importantes {
+    background: var(--fondo-secundario);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 20px;
+}
+
+.correcciones-importantes h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--guindo);
+    margin: 0 0 12px 0;
+}
+
+.correcciones-importantes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.correcciones-importantes ul li {
+    font-size: 13px;
+    color: var(--texto);
+    line-height: 1.7;
+    padding: 6px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.correcciones-importantes ul li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--celeste-oscuro);
+    font-weight: 700;
+}
+
+.correcciones-importantes ul li strong {
+    color: var(--guindo);
+}
+
+/* NOTA FINAL */
+.ia-nota-final {
+    text-align: center;
+    margin-top: 30px;
+    padding: 16px 20px;
+    background: var(--fondo-secundario);
+    border-radius: 12px;
+}
+
+.ia-nota-final p {
+    font-size: 13px;
+    color: var(--texto);
+    margin: 0;
+}
+
+.ia-nota-final a {
+    color: var(--guindo);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.ia-nota-final a:hover {
+    color: var(--celeste-oscuro);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .ia-card {
+        padding: 25px 20px;
+    }
+
+    .galeria-escenas {
+        grid-template-columns: 1fr;
+    }
+
+    .correccion-imagenes {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-evidencia-grande {
+        font-size: clamp(50px, 10vw, 80px);
+        letter-spacing: 6px;
+    }
+
+    .ia-header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .ia-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .ia-header h3 {
+        font-size: 26px;
+    }
+
+    .prompt-whatsapp {
+        padding: 14px;
+    }
+
+    .prompt-bubble {
+        padding: 14px 16px;
+    }
+
+    .prompt-bubble p {
+        font-size: 12px;
+    }
+
+    .prompt-footer {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+    }
+
+    .correccion-item {
+        padding: 16px;
+    }
+
+    .correccion-item h4 {
+        font-size: 19px;
+    }
+
+    .correccion-par img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .evidencia-ia {
+        padding: 60px 4%;
+    }
+
+    .titulo-evidencia-grande {
+        font-size: clamp(40px, 8vw, 55px);
+        letter-spacing: 4px;
+    }
+
+    .ia-card {
+        padding: 18px 14px;
+        border-radius: 12px;
+    }
+
+    .ia-header h3 {
+        font-size: 22px;
+    }
+
+    .ia-logo {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+
+    .ia-header-icono {
+        font-size: 30px;
+    }
+
+    .escena-item img {
+        height: 180px;
+    }
+
+    .correccion-par img {
+        height: 140px;
+    }
+
+    .correcciones-importantes ul li {
+        font-size: 12px;
+    }
+}
