@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAKU | Evidencia de IA</title>
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/evidencia-ia.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         FONDO DECORATIVO
+    ================================================== -->
+    <div class="fondo-decorativo"></div>
+
+    <!-- =================================================
+         BOTÓN CAMBIO DE TEMA
+    ================================================== -->
+    <button class="tema-btn" id="temaBtn" aria-label="Cambiar tema">
+        <span>☀</span>
+        <span>☾</span>
+    </button>
+
+    <!-- =================================================
+         BOTÓN DEL MENÚ
+    ================================================== -->
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <img src="img/menu.jpeg" alt="Abrir menú">
+    </button>
+
+    <!-- =================================================
+         MENÚ LATERAL
+    ================================================== -->
+    <aside class="menu-lateral" id="menuLateral">
+        <div class="menu-contenido">
+
+            <div class="menu-encabezado">
+                <img src="img/logo.png" class="menu-logo" alt="Logo YAKU">
+                <button class="cerrar-menu" id="cerrarMenu" aria-label="Cerrar menú">×</button>
+            </div>
+
+            <nav>
+                <div class="grupo-menu">
+                    <button class="titulo-menu" id="btnInicio">
+                        <span><small>01</small> INICIO</span>
+                        <b>⌄</b>
+                    </button>
+                    <div class="submenu" id="submenuInicio">
+                        <a href="index.html#titulo-logo">Título y Logo</a>
+                        <a href="index.html#descripcion">Descripción</a>
+                        <a href="index.html#relato">Relato</a>
+                        <a href="index.html#mencion">Mención</a>
+                    </div>
+                </div>
+
+                <a href="guion.html" class="enlace-menu"><span>02</span> Guion</a>
+                <a href="video.html" class="enlace-menu"><span>03</span> Video</a>
+                <a href="storyboard.html" class="enlace-menu"><span>04</span> Storyboard</a>
+                <a href="camino-heroe.html" class="enlace-menu"><span>05</span> Camino del Héroe</a>
+                <a href="evidencia-ia.html" class="enlace-menu"><span>06</span> Evidencia de IA</a>
+                <a href="mencion-software.html" class="enlace-menu"><span>07</span> Mención de Software</a>
+                <a href="conclusiones.html" class="enlace-menu"><span>08</span> Conclusiones</a>
+                <a href="creditos.html" class="enlace-menu"><span>09</span> Créditos</a>
+            </nav>
+
+        </div>
+    </aside>
+
+    <!-- =================================================
+         CONTENIDO PRINCIPAL
+    ================================================== -->
+    <main>
+
+        <!-- =============================================
+             SECCIÓN EVIDENCIA IA
+        ============================================== -->
+        <section class="seccion evidencia-ia" id="evidencia-ia">
+            <div class="contenedor">
+
+                <!-- TÍTULO GRANDE CENTRADO -->
+                <div class="encabezado-evidencia">
+                    <span class="numero-seccion">06</span>
+                    <h2 class="titulo-evidencia-grande">Uso de IA</h2>
+                    <p class="subtitulo-evidencia">Herramientas de inteligencia artificial utilizadas en el proyecto</p>
+                </div>
+
+                <!-- =========================================
+                     CHATGPT
+                ========================================== -->
+                <div class="ia-card">
+                    <div class="ia-header">
+                        <img src="img/chatgpt-logo.png" alt="ChatGPT logo" class="ia-logo">
+                        <div>
+                            <h3>ChatGPT</h3>
+                            <p>Generación del guion narrativo</p>
+                        </div>
+                    </div>
+
+                    <div class="ia-contenido">
+                        <!-- Prompt como mensaje de WhatsApp -->
+                        <div class="prompt-whatsapp">
+                            <div class="prompt-bubble">
+                                <p><strong>Prompt para el guion:</strong></p>
+                                <p>Conforme a las imágenes que te mande de mi relato. Necesito un guion para un video de 2 minutos basado en el relato andino "El Día del Fin del Mundo". El video debe tener dos partes: la primera respeta el relato original (contexto andino, wawas, ollita, agua que se escapa, casa que se derrumba) y la segunda es una reinterpretación desde el Desarrollo de Software (crisis actual del agua, cambio climático, app con IA llamada YAKU que monitorea el agua, predice sequías y educa). El estilo debe ser narrativo, emotivo y con tono de trailer cinematográfico. Incluir indicaciones de tipo de plano y duración.</p>
+                            </div>
+                            <div class="prompt-footer">
+                                <span class="prompt-ia"> ChatGPT</span>
+                                <span class="prompt-fecha">● Generación del guion</span>
+                            </div>
+                        </div>
+
+                        <!-- Imagen del relato -->
+                        <div class="ia-imagen">
+                            <img src="img/relato1.png" alt="Relato andino" class="imagen-ampliable">
+                            <p class="pie-imagen">Generación del guion basado en el relato</p>
+                        </div>
+                    </div>
+
+                    <div class="ia-nota">
+                        <p> El guion completo puede ser visualizado en la sección <strong>"Guion"</strong> del menú principal.</p>
+                    </div>
+                </div>
+
+                <!-- =========================================
+                     DOLA (GENERACIÓN DE IMÁGENES)
+                ========================================== -->
+                <div class="ia-card">
+                    <div class="ia-header">
+                        <img src="img/dola-logo.png" alt="Dola logo" class="ia-logo">
+                        <div>
+                            <h3>Dola</h3>
+                            <p>Generación de escenas e imágenes</p>
+                        </div>
+                    </div>
+
+                    <div class="ia-contenido">
+
+                        <!-- Descripción de generación -->
+                        <div class="dola-descripcion">
+                            <p><strong>Generamos 15 escenas con la ayuda de Dola</strong>, describiendo cada una de ellas en torno a lo que queríamos transmitir.</p>
+                        </div>
+
+                        <!-- Galería de imágenes generadas -->
+                        <div class="galeria-escenas">
+                            <div class="escena-item">
+                                <img src="img/escena4.png" alt="Escena 4 - Contexto andino" class="imagen-ampliable">
+                                <p class="pie-imagen">Escena 04 - Contexto andino</p>
+                            </div>
+                            <div class="escena-item">
+                                <img src="img/escena11.png" alt="Escena 11 - Reinterpretación tecnológica" class="imagen-ampliable">
+                                <p class="pie-imagen"> Escena 11 - Reinterpretación tecnológica</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- =========================================
+                     ERRORES Y CORRECCIONES
+                ========================================== -->
+                <div class="ia-card errores-card">
+                    <div class="ia-header">
+                        <div class="ia-header-icono">
+                            <span>🔧</span>
+                        </div>
+                        <div>
+                            <h3>Errores y correcciones</h3>
+                            <p>Pequeños ajustes en el proceso de generación</p>
+                        </div>
+                    </div>
+
+                    <div class="ia-contenido">
+
+                        <!-- Error 1: Niña triste vs feliz -->
+                        <div class="correccion-item">
+                            <h4>Escena 7 - Expresión incorrecta</h4>
+                            <p>La IA generó a la niña con expresión <strong>triste</strong>, pero debía ser <strong>feliz</strong>.</p>
+                            <div class="correccion-imagenes">
+                                <div class="correccion-par">
+                                    <img src="img/error.png" alt="Error - niña triste" class="imagen-ampliable">
+                                    <span class="correccion-etiqueta error"> Error</span>
+                                </div>
+                                <div class="correccion-par">
+                                    <img src="img/error1.png" alt="Corrección - niña feliz" class="imagen-ampliable">
+                                    <span class="correccion-etiqueta ok">Corrección</span>
+                                </div>
+                            </div>
+                            <p class="correccion-nota"> Se solicitó a la IA cambiar la expresión a una más alegre y esperanzadora.</p>
+                        </div>
+
+                        <!-- Error 2: Manos sin suficiente detalle -->
+                        <div class="correccion-item">
+                            <h4> Escena 8 - Falta de detalle en las manos</h4>
+                            <p>Queríamos demostrar <strong>dolor en las manos</strong> por la sequía. La IA no generó tanto daño en la mano.</p>
+                            <div class="correccion-imagenes">
+                                <div class="correccion-par">
+                                    <img src="img/error3.png" alt="Error - manos sin detalle" class="imagen-ampliable">
+                                    <span class="correccion-etiqueta error">Error</span>
+                                </div>
+                                <div class="correccion-par">
+                                    <img src="img/error4.png" alt="Corrección - manos con detalle" class="imagen-ampliable">
+                                    <span class="correccion-etiqueta ok"> Corrección</span>
+                                </div>
+                            </div>
+                            <p class="correccion-nota">La IA comprendió la solicitud y generó lo que buscábamos transmitir: manos agrietadas que reflejan el sufrimiento por la falta de agua.</p>
+                        </div>
+
+                        <!-- Correcciones importantes -->
+                        <div class="correcciones-importantes">
+                            <h4> Correcciones importantes</h4>
+                            <ul>
+                                <li><strong>Escena 8:</strong> Queríamos demostrar el dolor en las manos. La IA no generó tanto daño inicialmente, pero tras la corrección logramos transmitir el mensaje.</li>
+                                <li><strong>Escena 7:</strong> La expresión de la niña cambió de triste a feliz para reflejar esperanza.</li>
+                                <li>Se ajustaron colores y composiciones para mantener la coherencia visual entre escenas.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Nota final -->
+                <div class="ia-nota-final">
+                    <p>El guion completo puede ser visualizado en la sección <a href="guion.html">Guion</a> del menú principal.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =================================================
+         MODAL PARA AMPLIAR IMÁGENES
+    ================================================== -->
+    <div class="modal" id="modalImagen">
+        <button id="cerrarModal" class="cerrar-modal" aria-label="Cerrar imagen">×</button>
+        <img id="imagenModal" src="" alt="Imagen ampliada">
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+    <script src="js/evidencia-ia.js"></script>
+
+</body>
+
+</html>

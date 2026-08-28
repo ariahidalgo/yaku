@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAKU | Storyboard</title>
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/storyboard.css">
+</head>
+
+<body>
+
+    <!-- FONDO DECORATIVO -->
+    <div class="fondo-decorativo"></div>
+
+    <!-- BOTÓN CAMBIO DE TEMA (IZQUIERDA) -->
+    <button class="tema-btn" id="temaBtn" aria-label="Cambiar tema">
+        <span>☀</span>
+        <span>☾</span>
+    </button>
+
+    <!-- BOTÓN DEL MENÚ (DERECHA) -->
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <img src="img/menu.jpeg" alt="Abrir menú">
+    </button>
+
+    <!-- MENÚ LATERAL -->
+    <aside class="menu-lateral" id="menuLateral">
+        <div class="menu-contenido">
+
+            <div class="menu-encabezado">
+                <img src="img/logo.png" class="menu-logo" alt="Logo YAKU">
+                <button class="cerrar-menu" id="cerrarMenu" aria-label="Cerrar menú">×</button>
+            </div>
+
+            <nav>
+                <div class="grupo-menu">
+                    <button class="titulo-menu" id="btnInicio">
+                        <span><small>01</small> INICIO</span>
+                        <b>⌄</b>
+                    </button>
+                    <div class="submenu" id="submenuInicio">
+                        <a href="index.html#titulo-logo">Título y Logo</a>
+                        <a href="index.html#descripcion">Descripción</a>
+                        <a href="index.html#relato">Relato</a>
+                        <a href="index.html#mencion">Mención</a>
+                    </div>
+                </div>
+
+                <a href="guion.html" class="enlace-menu"><span>02</span> Guion</a>
+                <a href="video.html" class="enlace-menu"><span>03</span> Video</a>
+                <a href="storyboard.html" class="enlace-menu activo"><span>04</span> Storyboard</a>
+                <a href="camino-heroe.html" class="enlace-menu"><span>05</span> Camino del Héroe</a>
+                <a href="evidencia-ia.html" class="enlace-menu"><span>06</span> Evidencia de IA</a>
+                <a href="mencion-software.html" class="enlace-menu"><span>07</span> Mención de Software</a>
+                <a href="conclusiones.html" class="enlace-menu"><span>08</span> Conclusiones</a>
+                <a href="creditos.html" class="enlace-menu"><span>09</span> Créditos</a>
+            </nav>
+
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PORTADA -->
+        <section class="storyboard-portada">
+            <div class="portada-contenido">
+                <p class="texto-superior">YAKU · EL AGUA NO SE DERRAMA</p>
+                <h1>Storyboard</h1>
+                <div class="linea"></div>
+                <p class="frase-portada">La historia de YAKU contada escena por escena, desde el relato andino hasta la tecnología.</p>
+            </div>
+            <div class="gota gota-1"></div>
+            <div class="gota gota-2"></div>
+        </section>
+
+        <!-- INTRODUCCIÓN -->
+        <section class="introduccion">
+            <div class="contenedor">
+                <div class="introduccion-contenido">
+                    <div class="introduccion-titulo">
+                        <span>01</span>
+                        <div>
+                            <p>PLANIFICACIÓN VISUAL</p>
+                            <h2>15 escenas</h2>
+                        </div>
+                    </div>
+                    <p class="introduccion-texto">El storyboard organiza visualmente la narrativa de YAKU. Las primeras escenas presentan el relato andino y sus personajes; posteriormente, la historia conecta con el problema actual del agua y finalmente introduce la solución tecnológica YAKU.</p>
+                </div>
+
+                <div class="resumen-storyboard">
+                    <div>
+                        <span>ESCENAS</span>
+                        <strong>15</strong>
+                    </div>
+                    <div>
+                        <span>RELATO</span>
+                        <strong>01 – 10</strong>
+                    </div>
+                    <div>
+                        <span>ACTUALIDAD</span>
+                        <strong>11 – 12</strong>
+                    </div>
+                    <div>
+                        <span>TECNOLOGÍA</span>
+                        <strong>13 – 15</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORYBOARD -->
+        <section class="seccion escenas">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span>02</span>
+                    <div>
+                        <p>SECUENCIA VISUAL</p>
+                        <h2>Las escenas</h2>
+                    </div>
+                </div>
+
+                <!-- GRID: 3 COLUMNAS × 5 FILAS -->
+                <div class="storyboard-grid">
+
+                    <!-- ESCENA 1 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">01</span>
+                            <span class="duracion">10s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es1.png" alt="Escena 1 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO GENERAL LARGO</p>
+                            <h3>El inicio</h3>
+                            <p class="descripcion">Montañas andinas, cielo estrellado, niebla plateada y almitas brillando.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"En las alturas del mundo andino, las almas construyen una casa inmensa."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 2 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">02</span>
+                            <span class="duracion">10s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es2.png" alt="Escena 2 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO GENERAL PICADO</p>
+                            <h3>Las wawas</h3>
+                            <p class="descripcion">Almas con luz azul construyendo. Wawas con luz dorada caminando al río.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"Las almas grandes construyen esta casa, mientras las wawas trasladan agua desde un hermoso río."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 3 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">03</span>
+                            <span class="duracion">6s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es3.png" alt="Escena 3 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO DETALLE</p>
+                            <h3>Agua cristalina</h3>
+                            <p class="descripcion">Manos de wawa sosteniendo agua cristalina que brilla con luz estelar.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"Agua pura y cristalina."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 4 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">04</span>
+                            <span class="duracion">8s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es4.png" alt="Escena 4 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PRIMERÍSIMO PRIMER PLANO</p>
+                            <h3>El agua se escapa</h3>
+                            <p class="descripcion">Agua escurriéndose entre dedos. Gotas de luz cayendo.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"Pero el agua se escapa entre sus dedos. No tienen ollita."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 5 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">05</span>
+                            <span class="duracion">7s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es5.png" alt="Escena 5 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO MEDIO CONTRAPICADO</p>
+                            <h3>El castigo</h3>
+                            <p class="descripcion">Wawas regañadas por almas oscuras con luz rojiza.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"Como no hacen llegar el agua, les riñen y les castigan."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 6 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">06</span>
+                            <span class="duracion">8s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es6.png" alt="Escena 6 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PRIMER PLANO</p>
+                            <h3>La tristeza</h3>
+                            <p class="descripcion">Wawa llorando, lágrimas de luz y luz parpadeante.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"¡Ay mamitay! ¿por qué no me han mandado una ollita?"</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 7 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">07</span>
+                            <span class="duracion">7s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es7.png" alt="Escena 7 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO MEDIO</p>
+                            <h3>La ollita</h3>
+                            <p class="descripcion">Wawa feliz con ollita. Agua brillando con luz dorada.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"Las wawas que tienen su ollita fácilmente llevan agua y son queridas por Dios."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 8 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">08</span>
+                            <span class="duracion">7s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es8.png" alt="Escena 8 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PRIMER PLANO</p>
+                            <h3>Los dedos</h3>
+                            <p class="descripcion">Manos de alma grande agujereadas. Luz azul escapándose.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"Las almas grandes se les agujerean los dedos."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 9 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">09</span>
+                            <span class="duracion">9s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es9.png" alt="Escena 9 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO GENERAL</p>
+                            <h3>La casa cae</h3>
+                            <p class="descripcion">Casa de adobe derrumbándose. Almas enojadas.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"La casa se derrumba a cada instante. Todas las almas se enojan."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 10 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">10</span>
+                            <span class="duracion">10s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es10.png" alt="Escena 10 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO GENERAL LARGO</p>
+                            <h3>El ciclo</h3>
+                            <p class="descripcion">Almitas reconstruyendo. Luna brillante y ciclo infinito.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"El día que terminen esa gran casa, llegará el fin del mundo."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 11 -->
+                    <article class="escena-card transicion">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">11</span>
+                            <span class="duracion">8s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es11.png" alt="Escena 11 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">TRANSICIÓN</p>
+                            <h3>El presente</h3>
+                            <p class="descripcion">Paisaje andino que se funde con un campo seco y agrietado.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"Hoy, el agua también se nos escapa."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 12 -->
+                    <article class="escena-card">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">12</span>
+                            <span class="duracion">8s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es12.png" alt="Escena 12 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO MEDIO</p>
+                            <h3>El cambio climático</h3>
+                            <p class="descripcion">Datos climáticos: +2.5 °C y 42% de precipitación.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"El cambio climático hace que el agua se pierda entre nuestros dedos."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 13 -->
+                    <article class="escena-card tecnologia">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">13</span>
+                            <span class="duracion">10s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es13.png" alt="Escena 13 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO MEDIO</p>
+                            <h3>YAKU</h3>
+                            <p class="descripcion">Celular con la aplicación YAKU. Indicadores: 78%, 42% y +2.5 °C.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"YAKU es la ollita digital. Monitorea el agua en tiempo real."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 14 -->
+                    <article class="escena-card tecnologia">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">14</span>
+                            <span class="duracion">12s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es14.png" alt="Escena 14 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PRIMER PLANO</p>
+                            <h3>Inteligencia artificial</h3>
+                            <p class="descripcion">Tres pantallas: predicción IA 65%, consejos y mapa con alertas.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"Predice sequías y combina saber andino con tecnología moderna."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ESCENA 15 -->
+                    <article class="escena-card escena-final">
+                        <div class="escena-cabecera">
+                            <span class="numero-escena">15</span>
+                            <span class="duracion">5s</span>
+                        </div>
+                        <div class="imagen-escena">
+                            <img src="img/escenas/es15.png" alt="Escena 15 del storyboard">
+                        </div>
+                        <div class="datos-escena">
+                            <p class="tipo-plano">PLANO GENERAL</p>
+                            <h3>El agua no se derrama</h3>
+                            <p class="descripcion">Logo YAKU, almitas orbitando y texto final.</p>
+                            <div class="narracion">
+                                <span>NARRACIÓN</span>
+                                <p>"YAKU. El agua no se derrama."</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUMEN FINAL -->
+        <section class="resumen-final">
+            <div class="resumen-final-contenido">
+                <span class="numero-final">03</span>
+                <p>ESTRUCTURA NARRATIVA</p>
+                <h2>Del relato<br>a la solución.</h2>
+                <div class="linea"></div>
+                <div class="etapas">
+                    <div>
+                        <span>01 — 10</span>
+                        <strong>Relato andino</strong>
+                    </div>
+                    <div>
+                        <span>11 — 12</span>
+                        <strong>Problema actual</strong>
+                    </div>
+                    <div>
+                        <span>13 — 15</span>
+                        <strong>Solución YAKU</strong>
+                    </div>
+                </div>
+                <small>Sabiduría ancestral · Agua · Tecnología · Futuro</small>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL PARA AMPLIAR IMÁGENES -->
+    <div class="modal-imagen" id="modalImagen">
+        <button class="cerrar-modal-imagen" id="cerrarModalImagen" aria-label="Cerrar imagen">×</button>
+        <img id="imagenAmpliada" src="" alt="Imagen ampliada">
+    </div>
+
+    <script src="js/storyboard.js"></script>
+
+</body>
+
+</html>

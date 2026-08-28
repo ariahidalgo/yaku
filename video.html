@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAKU | Video del Proyecto</title>
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         FONDO DECORATIVO
+    ================================================== -->
+    <div class="fondo-decorativo"></div>
+
+    <!-- =================================================
+         BOTÓN CAMBIO DE TEMA
+    ================================================== -->
+    <button class="tema-btn" id="temaBtn" aria-label="Cambiar tema">
+        <span>☀</span>
+        <span>☾</span>
+    </button>
+
+    <!-- =================================================
+         BOTÓN DEL MENÚ
+    ================================================== -->
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <img src="img/menu.jpeg" alt="Abrir menú">
+    </button>
+
+    <!-- =================================================
+         MENÚ LATERAL
+    ================================================== -->
+    <aside class="menu-lateral" id="menuLateral">
+        <div class="menu-contenido">
+
+            <div class="menu-encabezado">
+                <img src="img/logo.png" class="menu-logo" alt="Logo YAKU">
+                <button class="cerrar-menu" id="cerrarMenu" aria-label="Cerrar menú">×</button>
+            </div>
+
+            <nav>
+                <div class="grupo-menu">
+                    <button class="titulo-menu" id="btnInicio">
+                        <span><small>01</small> INICIO</span>
+                        <b>⌄</b>
+                    </button>
+                    <div class="submenu" id="submenuInicio">
+                        <a href="index.html#titulo-logo">Título y Logo</a>
+                        <a href="index.html#descripcion">Descripción</a>
+                        <a href="index.html#relato">Relato</a>
+                        <a href="index.html#mencion">Mención</a>
+                    </div>
+                </div>
+
+                <a href="guion.html" class="enlace-menu"><span>02</span> Guion</a>
+                <a href="video.html" class="enlace-menu"><span>03</span> Video</a>
+                <a href="storyboard.html" class="enlace-menu"><span>04</span> Storyboard</a>
+                <a href="camino-heroe.html" class="enlace-menu"><span>05</span> Camino del Héroe</a>
+                <a href="evidencia-ia.html" class="enlace-menu"><span>06</span> Evidencia de IA</a>
+                <a href="mencion-software.html" class="enlace-menu"><span>07</span> Mención de Software</a>
+                <a href="conclusiones.html" class="enlace-menu"><span>08</span> Conclusiones</a>
+                <a href="creditos.html" class="enlace-menu"><span>09</span> Créditos</a>
+            </nav>
+
+        </div>
+    </aside>
+
+    <!-- =================================================
+         CONTENIDO PRINCIPAL
+    ================================================== -->
+    <main>
+
+        <!-- =============================================
+             SECCIÓN VIDEO
+        ============================================== -->
+        <section class="seccion video-principal" id="video">
+            <div class="contenedor">
+
+                <!-- ENCABEZADO CON TÍTULO GRANDE CENTRADO -->
+                <div class="encabezado-video">
+                    <span class="numero-seccion">03</span>
+                    <h2 class="titulo-video-grande">VIDEO</h2>
+                    <p class="subtitulo-video">Video narrativo del proyecto YAKU</p>
+                </div>
+
+                <!-- CARD CON INFORMACIÓN Y VIDEO -->
+                <div class="card-video">
+
+                    <!-- INFORMACIÓN DEL VIDEO -->
+                    <div class="card-info">
+                        <h3>El relato cobra vida</h3>
+                        <p>
+                            Video narrativo de 2 minutos que presenta el relato original
+                            <strong>"El Día del Fin del Mundo"</strong> y su reinterpretación
+                            desde el Desarrollo de Software con la aplicación <strong>YAKU</strong>.
+                        </p>
+                        <div class="card-meta">
+                            <span>📽 2 minutos</span>
+                            <span>🎬 MP4 · 16:9 · Full HD</span>
+                            <span>📖 "El Día del Fin del Mundo" - El Alto, Bolivia (2004)</span>
+                        </div>
+                    </div>
+
+                    <!-- REPRODUCTOR DE VIDEO -->
+                    <div class="card-video-wrapper">
+                        <video id="videoProyecto" controls playsinline preload="metadata">
+                            <source src="video.mp4" type="video/mp4">
+                            Tu navegador no puede reproducir este video.
+                        </video>
+                        <button class="btn-ampliar-video" id="btnAmpliarVideo" aria-label="Ampliar video">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 3 21 3 21 9" />
+                                <polyline points="9 21 3 21 3 15" />
+                                <line x1="21" y1="3" x2="14" y2="10" />
+                                <line x1="3" y1="21" x2="10" y2="14" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <p class="ampliar-video-texto">Haz clic en el ícono <span>⛶</span> para ampliar el video</p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =================================================
+         MODAL PARA AMPLIAR VIDEO (PANTALLA COMPLETA)
+    ================================================== -->
+    <div class="modal-video" id="modalVideo">
+        <button class="cerrar-modal-video" id="cerrarModalVideo" aria-label="Cerrar video">×</button>
+        <video id="videoModal" controls playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+        </video>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+    <script src="js/video.js"></script>
+
+</body>
+
+</html>

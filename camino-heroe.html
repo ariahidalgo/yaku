@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YAKU | Camino del Héroe</title>
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/camino-heroe.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         FONDO DECORATIVO
+    ================================================== -->
+
+    <div class="fondo-decorativo"></div>
+
+
+    <!-- =================================================
+         BOTÓN CAMBIO DE TEMA
+    ================================================== -->
+
+    <button class="tema-btn"
+            id="temaBtn"
+            aria-label="Cambiar tema">
+
+        <span>☀</span>
+        <span>☾</span>
+
+    </button>
+
+
+    <!-- =================================================
+         BOTÓN DEL MENÚ
+    ================================================== -->
+
+    <button class="menu-btn"
+            id="menuBtn"
+            aria-label="Abrir menú">
+
+        <img src="img/menu.jpeg"
+             alt="Abrir menú">
+
+    </button>
+
+
+    <!-- =================================================
+         MENÚ LATERAL
+    ================================================== -->
+
+    <aside class="menu-lateral"
+           id="menuLateral">
+
+        <div class="menu-contenido">
+
+            <!-- ENCABEZADO -->
+
+            <div class="menu-encabezado">
+
+                <img src="img/logo.png"
+                     class="menu-logo"
+                     alt="Logo YAKU">
+
+                <button class="cerrar-menu"
+                        id="cerrarMenu"
+                        aria-label="Cerrar menú">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav>
+
+                <!-- INICIO -->
+
+                <div class="grupo-menu">
+
+                    <button class="titulo-menu"
+                            id="btnInicio">
+
+                        <span>
+                            <small>01</small>
+                            INICIO
+                        </span>
+
+                        <b>⌄</b>
+
+                    </button>
+
+
+                    <div class="submenu"
+                         id="submenuInicio">
+
+                        <a href="index.html#titulo-logo">
+                            Título y Logo
+                        </a>
+
+                        <a href="index.html#descripcion">
+                            Descripción
+                        </a>
+
+                        <a href="index.html#relato">
+                            Relato
+                        </a>
+
+                        <a href="index.html#mencion">
+                            Mención
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEMÁS PÁGINAS -->
+
+                <a href="guion.html"
+                   class="enlace-menu">
+
+                    <span>02</span>
+                    Guion
+
+                </a>
+
+
+                <a href="video.html"
+                   class="enlace-menu">
+
+                    <span>03</span>
+                    Video
+
+                </a>
+
+
+                <a href="storyboard.html"
+                   class="enlace-menu">
+
+                    <span>04</span>
+                    Storyboard
+
+                </a>
+
+
+                <a href="camino.html"
+                   class="enlace-menu activo-menu">
+
+                    <span>05</span>
+                    Camino del Héroe
+
+                </a>
+
+
+                <a href="evidencia-ia.html"
+                   class="enlace-menu">
+
+                    <span>06</span>
+                    Evidencia de IA
+
+                </a>
+
+
+                <a href="mencion-software.html"
+                   class="enlace-menu">
+
+                    <span>07</span>
+                    Mención de Software
+
+                </a>
+
+ <a href="conclusiones.html"
+                   class="enlace-menu">
+                    <span>08</span>
+                    Conclusiones
+                </a>
+                <a href="creditos.html"
+                   class="enlace-menu">
+                    <span>09</span>
+                    Créditos
+                </a>
+
+            </nav>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         CONTENIDO PRINCIPAL
+    ================================================== -->
+
+    <main>
+
+        <!-- =================================================
+             PORTADA DE LA SECCIÓN
+        ================================================== -->
+
+        <section class="cabecera-camino">
+
+            <div class="contenedor">
+
+            
+
+                <p class="etiqueta">
+                    ESTRUCTURA NARRATIVA
+                </p>
+
+                <h1>
+                    Camino del
+                    <em>Héroe</em>
+                </h1>
+
+                <div class="linea"></div>
+
+                <p class="introduccion">
+
+                    Aplicado al relato
+                    <strong>"El Día del Fin del Mundo"</strong>
+                    y su reinterpretación desde el
+                    <strong>Desarrollo de Software</strong>.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TABLA CAMINO DEL HÉROE
+        ================================================== -->
+
+        <section class="seccion camino-tabla">
+
+            <div class="contenedor">
+
+                <div class="tabla-contenedor">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th class="col-etapa">
+                                    ETAPA
+                                </th>
+
+                          
+
+                                <th>
+                                    EN EL RELATO ORIGINAL
+                                </th>
+
+                                <th>
+                                    EN DESARROLLO DE SOFTWARE
+                                    <span class="th-yaku">
+                                        YAKU
+                                    </span>
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <!-- 01 -->
+
+                            <tr>
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        01
+                                    </span>
+
+                                    <strong>
+                                        Mundo ordinario
+                                    </strong>
+
+                                </td>
+
+                           
+
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    Las wawas (almas de niños) existen
+                                    en el mundo espiritual andino.
+                                    Algunas tienen ollita, otras no.
+                                    Las que no tienen sufren.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    Comunidades andinas con acceso
+                                    al agua, pero sin herramientas
+                                    tecnológicas para gestionarla.
+                                    No tienen datos ni previsiones
+                                    sobre su disponibilidad futura.
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- 02 -->
+
+                            <tr>
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        02
+                                    </span>
+
+                                    <strong>
+                                        Llamado
+                                    </strong>
+
+                                </td>
+
+                           
+
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    Las wawas deben llevar agua
+                                    desde el río cristalino para
+                                    que las almas grandes construyan
+                                    la casa. Es una tarea obligatoria
+                                    y esencial.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    El cambio climático, la sequía
+                                    y el desperdicio hacen que el
+                                    agua se esté volviendo escasa.
+                                    Las comunidades enfrentan crisis
+                                    hídricas cada vez más frecuentes.
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- 03 -->
+
+                            <tr>
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        03
+                                    </span>
+
+                                    <strong>
+                                        Duda
+                                    </strong>
+
+                                </td>
+
+                           
+                            
+
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    Las wawas sin ollita no saben
+                                    cómo llevar el agua sin que
+                                    se les escurra entre los dedos.
+                                    Dudan, sufren, son castigadas.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    Las comunidades no saben cómo
+                                    gestionar el agua de manera
+                                    eficiente. No tienen información
+                                    oportuna ni pueden predecir
+                                    sequías.
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- 04 -->
+
+                            <tr>
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        04
+                                    </span>
+
+                                    <strong>
+                                        Mentor o ayuda
+                                    </strong>
+
+                                </td>
+
+
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    La ollita de barro aparece
+                                    como la herramienta que
+                                    resuelve el problema.
+                                    Con ella, el agua no se derrama.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    YAKU se presenta como la
+                                    <strong>"ollita digital"</strong>:
+                                    una aplicación web con inteligencia
+                                    artificial que monitorea el agua,
+                                    predice sequías y educa a la comunidad.
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- 05 -->
+
+                            <tr>
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        05
+                                    </span>
+
+                                    <strong>
+                                        Cruce del umbral
+                                    </strong>
+
+                                </td>
+
+                       
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    Las wawas que tienen ollita
+                                    deciden actuar. Toman el agua
+                                    y caminan hacia la casa.
+                                    Actúan con seguridad.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    La comunidad decide implementar
+                                    YAKU. Dan el paso hacia la
+                                    tecnología. Se comprometen
+                                    a monitorear y preservar
+                                    su agua.
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- 06 -->
+
+                            <tr>
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        06
+                                    </span>
+
+                                    <strong>
+                                        Pruebas
+                                    </strong>
+
+                                </td>
+
+                        
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    Las wawas sin ollita enfrentan
+                                    la prueba del agua que se escapa.
+                                    Son regañadas y castigadas.
+                                    El fracaso tiene consecuencias.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    La comunidad enfrenta dificultades:
+                                    acceso limitado a internet, falta
+                                    de dispositivos, resistencia
+                                    cultural al cambio y
+                                    analfabetismo digital.
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- 07 -->
+
+                            <tr class="gran-desafio">
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        07
+                                    </span>
+
+                                    <strong>
+                                        Gran desafío
+                                    </strong>
+
+                                </td>
+
+
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    La casa se derrumba.
+                                    Todas las almas se enojan
+                                    con las que tienen las manos
+                                    lastimadas. El caos reina.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    La sequía golpea fuerte.
+                                    La comunidad se queda sin agua.
+                                    Los cultivos mueren.
+                                    Es el momento de mayor crisis.
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- 08 -->
+
+                            <tr>
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        08
+                                    </span>
+
+                                    <strong>
+                                        Recompensa
+                                    </strong>
+
+                                </td>
+
+
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    Las wawas que tienen ollita
+                                    son queridas por Dios.
+                                    El agua llega segura a la casa.
+                                    Hay orden y armonía.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    La comunidad usa YAKU y logra
+                                    conservar el agua. Las alertas
+                                    tempranas permiten prepararse
+                                    para la sequía.
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- 09 -->
+
+                            <tr>
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        09
+                                    </span>
+
+                                    <strong>
+                                        Regreso
+                                    </strong>
+
+                                </td>
+
+
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    La construcción continúa.
+                                    Las wawas siguen llevando agua
+                                    con la ollita. El ciclo se ha
+                                    vuelto estable.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    La comunidad sigue usando YAKU
+                                    en su vida cotidiana. La aplicación
+                                    se ha integrado a su rutina.
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- 10 -->
+
+                            <tr>
+
+                                <td class="etapa">
+
+                                    <span class="numero">
+                                        10
+                                    </span>
+
+                                    <strong>
+                                        Transformación
+                                    </strong>
+
+                                </td>
+
+                                <td class="relato-celda">
+
+                                    <span class="mini-titulo">
+                                        EL RELATO
+                                    </span>
+
+                                    Las wawas aprenden que la
+                                    herramienta, la ollita, es esencial
+                                    para cumplir su misión.
+                                    El conocimiento se transmite.
+
+                                </td>
+
+                                <td class="yaku-celda">
+
+                                    La comunidad se transforma.
+                                    Ya no es una comunidad sin datos,
+                                    sino una comunidad que gestiona
+                                    su agua con tecnología y
+                                    saberes andinos.
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REFLEXIÓN FINAL
+        ================================================== -->
+
+        <section class="reflexion">
+
+            <div class="contenedor">
+
+                <div class="reflexion-cuadro">
+
+                    <span class="comillas">
+                        “
+                    </span>
+
+                    <p class="etiqueta">
+                        REFLEXIÓN FINAL
+                    </p>
+
+                    <h2>
+                        La misma misión,
+                        otra herramienta.
+                    </h2>
+
+                    <p class="reflexion-texto">
+
+                        El viaje de las wawas en el relato andino
+                        es el mismo viaje que nuestras comunidades
+                        enfrentan hoy frente a la crisis del agua.
+                        La ollita y YAKU son la misma herramienta
+                        en diferentes épocas: una solución que
+                        permite que el agua no se derrame.
+
+                    </p>
+
+                    <div class="frase-final">
+
+                        La tecnología no reemplaza la tradición,
+                        <strong>la amplifica.</strong>
+
+                    </div>
+
+             
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PIE
+        ================================================== -->
+
+        <section class="datos-finales">
+
+            <div class="contenedor">
+
+                <div class="nota-final">
+
+                    <span>
+                        CAMINO DEL HÉROE
+                    </span>
+
+                    <p>
+                        Relato ancestral · Reinterpretación digital
+                    </p>
+
+                    <strong>
+                        YAKU · El agua no se derrama
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="js/camino-heroe.js"></script>
+
+</body>
+</html>
